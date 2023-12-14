@@ -185,11 +185,15 @@ Step 10: Using Postman Application for API Testing
 
 Open Postman and paste your Laravel localhost server URL. Ensure your server is running at the specified URL 
         
-    http://127.0.0.1:8000/api/yourtablename.
+    http://127.0.0.1:8000/api/yourtablename
 
 Step 11: Creating Records in the Database
 
-To add data to the database table, set the method to POST and use the URL http://127.0.0.1:8000/api/yourtablename. In the request body, provide the values for the table columns and click the "Send" button.
+To add data to the database table, set the method to POST and use the URL 
+
+    http://127.0.0.1:8000/api/yourtablename 
+    
+In the request body, provide the values for the table columns and click the "Send" button.
 
 Step 12: Retrieving Records
 
@@ -201,13 +205,13 @@ Click the "Send" button to get the data.
 
 To retrieve a specific record, use the URL format 
 
-    http://127.0.0.1:8000/api/yourtablename/{id}.
+    http://127.0.0.1:8000/api/yourtablename/{id}
 
 Step 13: Updating Records
 
 For updating records, change the method to PUT and use the URL with the specific ID: 
 
-    http://127.0.0.1:8000/api/yourtablename/{id}. 
+    http://127.0.0.1:8000/api/yourtablename/{id}
     
 In the request body, update the values of the record and click the "Send" button.
 
@@ -215,7 +219,7 @@ Step 14: Deleting Records
 
 To delete a record, change the method to DELETE and use the URL with the specific ID: 
 
-    http://127.0.0.1:8000/api/yourtablename/{id}. 
+    http://127.0.0.1:8000/api/yourtablename/{id} 
     
 If the operation is successful, the response will indicate the deletion; otherwise, it will provide an error message.
 
