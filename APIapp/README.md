@@ -2,7 +2,8 @@ Laravel API CRUD GUIDE
 
 Introduction:
 
-In this comprehensive guide, we will walk you through the process of setting up a Laravel project with an API CRUD system. Laravel, a popular PHP framework, offers an elegant and efficient solution for building secure and scalable web applications.
+In this comprehensive guide, we will walk you through the process of setting up a Laravel project with an API CRUD system. 
+Laravel, a popular PHP framework, offers an elegant and efficient solution for building secure and scalable web applications.
 
 Prerequisites:
 
@@ -53,15 +54,15 @@ This will create a migration file in the database/migrations directory. Open the
             $table->timestamps();
         });
     }
-    Replace yourtablename and define the table columns as needed.
+Replace yourtablename and define the table columns as needed.
 
 Step 4: Create a Model
 
-    A model allows you to interact with the database table. To create a model, run the following command:
+A model allows you to interact with the database table. To create a model, run the following command:
 
     "php artisan make:model YourModelName"
 
-    In the created model file (located in the app/Models directory), specify the table name and the fillable attributes.
+In the created model file (located in the app/Models directory), specify the table name and the fillable attributes.
 
     namespace App\Models;
 
@@ -75,25 +76,26 @@ Step 4: Create a Model
         protected $table = 'yourtablename';
         protected $fillable = ['name', 'place', 'age'];
     }
-    Replace YourModelName and ensure that the table name and fillable attributes match your database structure.
+    
+Replace YourModelName and ensure that the table name and fillable attributes match your database structure.
 
 Step 5: Run Migrations
 
-    Execute the following command to run the migrations and create the database table:
+Execute the following command to run the migrations and create the database table:
 
-    "php artisan migrate"
+    php artisan migrate
 
-    This will apply the changes defined in your migration file to your database.
+This will apply the changes defined in your migration file to your database.
 
 Step 6: Create Controllers
 
-    Controllers are responsible for handling the application's logic. To create a controller, run the following command:
+Controllers are responsible for handling the application's logic. To create a controller, run the following command:
 
-    "php artisan make:controller YourControllerName --api"
+    php artisan make:controller YourControllerName --api
 
-    In the created controller file (located in the app/Http/Controllers directory), define the methods to perform actions such as displaying, adding, updating, and deleting data. Make sure to provide meaningful method names and comments to explain their purpose clearly.
+In the created controller file (located in the app/Http/Controllers directory), define the methods to perform actions such as displaying, adding, updating, and deleting data. Make sure to provide meaningful method names and comments to explain their purpose clearly.
 
-    In the created controller file (located in the app/Http/Controllers directory), define the methods to perform actions such as displaying, adding, updating, and deleting data.
+In the created controller file (located in the app/Http/Controllers directory), define the methods to perform actions such as displaying, adding, updating, and deleting data.
  
         <?php
         namespace App\Http\Controllers;
@@ -153,52 +155,68 @@ Step 6: Create Controllers
 
 Step 7: Define Routes
 
-    Open the routes/api.php file and define the routes to access your controller methods. Use meaningful route names and comments to indicate the purpose of each route.
+Open the routes/api.php file and define the routes to access your controller methods. Use meaningful route names and comments to indicate the purpose of each route.
 
-    // Example of defining routes
+// Example of defining routes
 
-    "Route::apiResource('/students', YourControllerName::class);"
+    Route::apiResource('/students', YourControllerName::class);
 
 Step 8: View the Route List
 
-    Open your terminal and execute the following command to view your route list:
+Open your terminal and execute the following command to view your route list:
 
-    "php artisan route:list"
+    php artisan route:list
 
-    This will display a list of all the defined routes in your application.
+This will display a list of all the defined routes in your application.
 
 Step 9: Run the Project
 
-    To run your Laravel project, open your terminal and execute the following commands:
+To run your Laravel project, open your terminal and execute the following commands:
 
-    "php artisan optimize"
-    "php artisan cache:clear"
-    "php artisan serve"
+    php artisan optimize
+    php artisan cache:clear
+    php artisan serve
 
-    The last command will start the development server, and you can access your project by visiting the provided URL (usually http://127.0.0.1:8000) in your web browser.
+The last command will start the development server, and you can access your project by visiting the provided URL (usually http://127.0.0.1:8000) in your web browser.
 
-    Your Laravel project, following the MVC pattern, is now up and running.
+Your Laravel project, following the MVC pattern, is now up and running.
 
 Step 10: Using Postman Application for API Testing
 
-    Open Postman and paste your Laravel localhost server URL. Ensure your server is running at the specified URL (http://127.0.0.1:8000/api/yourtablename).
+Open Postman and paste your Laravel localhost server URL. Ensure your server is running at the specified URL 
+        
+    http://127.0.0.1:8000/api/yourtablename.
 
 Step 11: Creating Records in the Database
 
-    To add data to the database table, set the method to POST and use the URL http://127.0.0.1:8000/api/yourtablename. In the request body, provide the values for the table columns and click the "Send" button.
+To add data to the database table, set the method to POST and use the URL http://127.0.0.1:8000/api/yourtablename. In the request body, provide the values for the table columns and click the "Send" button.
 
 Step 12: Retrieving Records
 
-    To retrieve data from the table, set the method to GET and use the URL http://127.0.0.1:8000/api/yourtablename. Click the "Send" button to get the data.
+To retrieve data from the table, set the method to GET and use the URL 
 
-    To retrieve a specific record, use the URL format http://127.0.0.1:8000/api/yourtablename/{id}.
+    http://127.0.0.1:8000/api/yourtablename 
+    
+Click the "Send" button to get the data.
+
+To retrieve a specific record, use the URL format 
+
+    http://127.0.0.1:8000/api/yourtablename/{id}.
 
 Step 13: Updating Records
 
-    For updating records, change the method to PUT and use the URL with the specific ID: http://127.0.0.1:8000/api/yourtablename/{id}. In the request body, update the values of the record and click the "Send" button.
+For updating records, change the method to PUT and use the URL with the specific ID: 
+
+    http://127.0.0.1:8000/api/yourtablename/{id}. 
+    
+In the request body, update the values of the record and click the "Send" button.
 
 Step 14: Deleting Records
 
-    To delete a record, change the method to DELETE and use the URL with the specific ID: http://127.0.0.1:8000/api/yourtablename/{id}. If the operation is successful, the response will indicate the deletion; otherwise, it will provide an error message.
+To delete a record, change the method to DELETE and use the URL with the specific ID: 
 
-    By following these steps, you can create a professional Laravel API CRUD system with clear and organized documentation.
+    http://127.0.0.1:8000/api/yourtablename/{id}. 
+    
+If the operation is successful, the response will indicate the deletion; otherwise, it will provide an error message.
+
+By following these steps, you can create a professional Laravel API CRUD system with clear and organized documentation.
