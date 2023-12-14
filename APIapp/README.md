@@ -2,29 +2,29 @@ Laravel API CRUD GUIDE
 
 Introduction:
 
-    In this comprehensive guide, we will walk you through the process of setting up a Laravel project with an API CRUD system. Laravel, a popular PHP framework, offers an elegant and efficient solution for building secure and scalable web applications.
+In this comprehensive guide, we will walk you through the process of setting up a Laravel project with an API CRUD system. Laravel, a popular PHP framework, offers an elegant and efficient solution for building secure and scalable web applications.
 
 Prerequisites:
 
-    Before you begin this guide, ensure that you have the following prerequisites in place:
+Before you begin this guide, ensure that you have the following prerequisites in place:
 
-    Composer installed on your system.
-    A web server such as Apache or Nginx.
-    PHP installed, preferably version 7.4 or later.
-    A functional database server (e.g., MySQL).
-    Postman application for testing the API.
+Composer installed on your system.
+A web server such as Apache or Nginx.
+PHP installed, preferably version 7.4 or later.
+A functional database server (e.g., MySQL).
+Postman application for testing the API.
 
 Step 1: Create a New Laravel Project
 
-    In your terminal, execute the following command to create a new Laravel project, replacing yourProjectName with your desired project name:
+In your terminal, execute the following command to create a new Laravel project, replacing yourProjectName with your desired project name:
 
-    "composer create-project laravel/laravel yourProjectName"
+    composer create-project laravel/laravel yourProjectName
 
-    This command initializes a fresh Laravel installation in a directory named yourProjectName.
+This command initializes a fresh Laravel installation in a directory named yourProjectName.
 
 Step 2: Configure Database Connection
 
-    Open the .env file in your project's root directory and configure your database connection settings as follows:
+Open the .env file in your project's root directory and configure your database connection settings as follows:
 
     DB_CONNECTION=mysql
     DB_HOST=127.0.0.1
@@ -33,15 +33,15 @@ Step 2: Configure Database Connection
     DB_USERNAME=databaseUserName
     DB_PASSWORD=yourDatabasePassword
 
-    Replace yourDatabaseName, databaseUserName, and yourDatabasePassword with your actual database details.
+Replace yourDatabaseName, databaseUserName, and yourDatabasePassword with your actual database details.
 
 Step 3: Create Database Migrations
 
-    Migrations allow you to create and modify database tables. To create a migration for a new table, execute the following command in the terminal:
+Migrations allow you to create and modify database tables. To create a migration for a new table, execute the following command in the terminal:
 
-    "php artisan make:migration create_yourtablename"
+    php artisan make:migration create_yourtablename
 
-    This will create a migration file in the database/migrations directory. Open the newly created migration file and define the table structure within the up method.
+This will create a migration file in the database/migrations directory. Open the newly created migration file and define the table structure within the up method.
 
     public function up()
     {
