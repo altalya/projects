@@ -1,10 +1,12 @@
 **Laravel Image Upload and CRUD Operations Using API: A Comprehensive Guide**
 
 **Introduction:**
-    This guide aims to provide a detailed walkthrough for setting up a Laravel project to facilitate image uploads and perform CRUD (Create, Read, Update, Delete) operations through an API system. Laravel, a widely-used PHP framework, offers an elegant and efficient solution for developing secure and scalable web applications.
+
+This guide aims to provide a detailed walkthrough for setting up a Laravel project to facilitate image uploads and perform CRUD (Create, Read, Update, Delete) operations through an API system. Laravel, a widely-used PHP framework, offers an elegant and efficient solution for developing secure and scalable web applications.
 
 **Prerequisites:**
-    Before embarking on this guide, ensure the following prerequisites are met:
+    
+Before embarking on this guide, ensure the following prerequisites are met:
 
 1.Composer installed on your system.
 2.A web server such as Apache or Nginx.
@@ -13,14 +15,16 @@
 5.Postman application for testing the API.
 
 **Step 1: Create a New Laravel Project**
-    In your terminal, execute the following command to create a new Laravel project, replacing yourProjectName with your desired project name:
+    
+In your terminal, execute the following command to create a new Laravel project, replacing yourProjectName with your desired project name:
 
         composer create-project laravel/laravel yourProjectName
 
 This command initializes a fresh Laravel installation in a directory named yourProjectName.
 
 **Step 2: Configure Database Connection**
-    Open the .env file in your project's root directory and configure your database connection settings as follows:
+    
+Open the .env file in your project's root directory and configure your database connection settings as follows:
 
         DB_CONNECTION=mysql
         DB_HOST=127.0.0.1
@@ -32,7 +36,8 @@ This command initializes a fresh Laravel installation in a directory named yourP
 Replace yourDatabaseName, databaseUserName, and yourDatabasePassword with your actual database details.
 
 **Step 3: Create Database Migrations**
-    Migrations allow you to create and modify database tables. To create a migration for a new table, execute the following command in the terminal:
+
+Migrations allow you to create and modify database tables. To create a migration for a new table, execute the following command in the terminal:
 
         php artisan make:migration create_yourtablename
 
@@ -51,7 +56,8 @@ This will create a migration file in the database/migrations directory. Open the
 Replace yourtablename and define the table columns as needed.
 
 **Step 4: Create a Model**
-    A model allows you to interact with the database table. To create a model, run the following command:
+
+A model allows you to interact with the database table. To create a model, run the following command:
 
         php artisan make:model YourModelName
 
@@ -70,14 +76,16 @@ In the created model file (located in the app/Models directory), specify the tab
 Replace YourModelName and ensure that the table name and fillable attributes match your database structure.
 
 **Step 5: Run Migrations**
-    Execute the following command to run the migrations and create the database table:
+
+Execute the following command to run the migrations and create the database table:
 
         php artisan migrate
 
 This will apply the changes defined in your migration file to your database.
 
 **Step 6: Create Controllers**
-    Controllers are responsible for handling the application's logic. To create a controller, run the following command:
+
+Controllers are responsible for handling the application's logic. To create a controller, run the following command:
 
         php artisan make:controller YourControllerName --api
 
@@ -168,14 +176,16 @@ In the created controller file (located in the app/Http/Controllers directory), 
         }
 
 **Step 7: To Link public to Storage**
-    Execute the following command to connect the public and storage path:
+
+Execute the following command to connect the public and storage path:
 
         php artisan storage:link
 
 This will apply the changes and connect the public and storage file.
 
 **Step 8: Define Routes**
-    Open the routes/api.php file and define the routes to access your controller methods. Use meaningful route names and comments to indicate the purpose of each route.
+
+Open the routes/api.php file and define the routes to access your controller methods. Use meaningful route names and comments to indicate the purpose of each route.
 
 Example of defining routes
 
@@ -186,14 +196,16 @@ Example of defining routes
         Route::delete('/delete/{id}',[YourControllerName::class,'delete']); 
 
 **Step 9: View the Route List**
-    Open your terminal and execute the following command to view your route list:
+
+Open your terminal and execute the following command to view your route list:
 
         php artisan route:list
 
 This will display a list of all the defined routes in your application.
 
 **Step 10: Run the Project**
-    To run your Laravel project, open your terminal and execute the following commands:
+
+To run your Laravel project, open your terminal and execute the following commands:
 
         php artisan optimize
         php artisan cache:clear
@@ -205,19 +217,22 @@ The last command will start the development server, and you can access your proj
 Your Laravel project, following the MVC pattern, is now up and running.
 
 **Step 11: Using Postman Application for API Testing**
-    Open Postman and paste your Laravel localhost server URL. Ensure your server is running at the specified URL
+
+Open Postman and paste your Laravel localhost server URL. Ensure your server is running at the specified URL
 
         http://127.0.0.1:8000
  
 **Step 12: Creating Records in the Database**
-    To add data to the database table, set the method to POST and use the URL
+
+To add data to the database table, set the method to POST and use the URL
 
         http://127.0.0.1:8000/api/create 
 
 In the request body, change the radio button to form-data and then provide the values as per your table columns, then to upload file or image change the input area from text to file and upload file from your device and click the "Send" button.
 
 **Step 13: Retrieving Records**
-    To retrieve data from the table, set the method to GET and use the URL
+
+To retrieve data from the table, set the method to GET and use the URL
 
         http://127.0.0.1:8000/api/get 
     
@@ -228,14 +243,16 @@ To retrieve a specific record, use the URL format
         http://127.0.0.1:8000/api/edit/{id}
 
 **Step 14: Updating Records**
-    For updating records, change the method to POST and use the URL with the specific ID:
+
+For updating records, change the method to POST and use the URL with the specific ID:
 
         http://127.0.0.1:8000/api/update/{id}
 
 In the request body, update the values of the record as same as in step 12 and click the "Send" button.
 
 **Step 15: Deleting Records**
-    To delete a record, change the method to DELETE and use the URL with the specific ID:
+
+To delete a record, change the method to DELETE and use the URL with the specific ID:
 
         http://127.0.0.1:8000/api/delete/{id} 
     
