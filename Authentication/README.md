@@ -14,14 +14,16 @@ Before you embark on this guide, ensure that you have the following prerequisite
 4. A functional database server (e.g., MySQL).
 
 Step 1: Create a New Laravel Project:
-    Open your terminal and execute the following command to create a new Laravel project. Replace yourProjectName with your preferred project name:
+    
+Open your terminal and execute the following command to create a new Laravel project. Replace yourProjectName with your preferred project name:
 
        composer create-project laravel/laravel yourProjectName
 
 This command initializes a fresh Laravel installation in a directory named yourProjectName.
 
 Step 2: Configure Database Connection:
-    Open the .env file in your project's root directory and configure your database connection settings:
+
+Open the .env file in your project's root directory and configure your database connection settings:
 
         DB_CONNECTION=mysql
         DB_HOST=127.0.0.1
@@ -33,7 +35,8 @@ Step 2: Configure Database Connection:
 Replace yourDatabaseName, databaseUserName, and yourDatabasePassword with your actual database details.
 
 Step 3: Add Breeze Package for Login and Register Pages:
-    Execute the following commands in your terminal to integrate the Breeze package into your Laravel project:
+
+Execute the following commands in your terminal to integrate the Breeze package into your Laravel project:
 
     composer require laravel/breeze
     php artisan breeze:install
@@ -43,17 +46,20 @@ Step 3: Add Breeze Package for Login and Register Pages:
 Breeze automates the setup of login, register, and dashboard pages.
 
 Step 4: Modify the User Migration Table:    
-    Add a new column user_type with a default value of "user" to the users table:
+
+Add a new column user_type with a default value of "user" to the users table:
 
        $table->string("user_type")->default("user");
 
 Step 5: Migrate the Database
-    Run the following command in your terminal to execute the database migration:
+
+Run the following command in your terminal to execute the database migration:
 
        php artisan migrate
 
 Step 6: Create Controllers:
-    Generate controllers using the following command:
+
+Generate controllers using the following command:
 
        php artisan make:controller YourControllerName
 
@@ -76,17 +82,20 @@ In the created controller, implement methods to handle different actions based o
         }
         
 Step 7: Create View Files:
-    Create additional view files for various functionalities, such as adding products and listing data.
-    A dashboard view is already created for the both user and admin , so you have create view blade similar as dashboard to 
-    set one for user and one for admin. 
+
+Create additional view files for various functionalities, such as adding products and listing data. 
+A dashboard view is already created for the both user and admin , so you have create view blade 
+similar as dashboard to set one for user and one for admin. 
 
 Step 8: Add Users to Database
-    Register users through the registration page, and update one user's user_type to "admin" using a SQL update query.
+
+Register users through the registration page, and update one user's user_type to "admin" using a SQL update query.
 
        UPDATE users SET user_type = "admin" WHERE id = specificId;
 
 Step 9: Authentication Middleware
-    Generate a middleware for authentication:
+
+Generate a middleware for authentication:
 
        php artisan make:middleware YourMiddlewareName
 
@@ -99,12 +108,14 @@ Update the middleware to restrict access based on user type:
         }
 
 Step 10: Modify kernel.php File
-    Add the middleware to the kernel.php file:
+
+Add the middleware to the kernel.php file:
 
        'admin' => \App\Http\Middleware\YourMiddlewareName::class,
 
 Step 11: Define Routes
-    Define routes in the routes/web.php file:
+
+Define routes in the routes/web.php file:
 
         use Illuminate\Support\Facades\Route;
         use App\Http\Controllers\YourControllerName;
@@ -124,7 +135,8 @@ Step 11: Define Routes
 Ensure to replace YourControllerName and update the route URLs to match your project's structure.
 
 Step 12: Run the Project
-    Execute the following commands to optimize and run your Laravel project:
+
+Execute the following commands to optimize and run your Laravel project:
 
        php artisan optimize
        php artisan cache:clear
