@@ -1,10 +1,12 @@
-Laravel Email Setup Guide
+**Laravel Email Setup Guide**
 
 Introduction:
-    In this guide, we will walk you through the process of setting up an email functionality in Laravel. Laravel, a leading PHP framework, is renowned for its ease of use and follows the MVC design pattern, which separates applications into Models, Views, and Controllers.
+    
+In this guide, we will walk you through the process of setting up an email functionality in Laravel. Laravel, a leading PHP framework, is renowned for its ease of use and follows the MVC design pattern, which separates applications into Models, Views, and Controllers.
 
 Prerequisites:
-    Before you begin, ensure that you have the following prerequisites:
+
+Before you begin, ensure that you have the following prerequisites:
 
 Composer installed on your system.
 A web server like Apache or Nginx.
@@ -13,7 +15,8 @@ A working database server, e.g., MySQL.
 Access to your email account via a web browser.
 
 Step 1: Create a New Laravel Project
-    Open your terminal and execute the following command to create a new Laravel project. Replace yourProjectName with the desired name for your project.
+
+Open your terminal and execute the following command to create a new Laravel project. Replace yourProjectName with the desired name for your project.
 
     composer create-project laravel/laravel yourProjectName
 
@@ -25,7 +28,8 @@ Generate an App password in the "App password" section.
 Copy the 16-digit generated password.
 
 Step 3: Configure Database Connection
-    Open the .env file in your project's root directory and configure your database connection settings.
+
+Open the .env file in your project's root directory and configure your database connection settings.
 
     DB_CONNECTION=mysql
     DB_HOST=127.0.0.1
@@ -35,7 +39,8 @@ Step 3: Configure Database Connection
     DB_PASSWORD=yourDatabasePassword
 
 Step 4: Configure Email Connection
-    Open the .env file and configure your Email connection settings.
+
+Open the .env file and configure your Email connection settings.
 
     MAIL_MAILER=smtp
     MAIL_HOST=smtp.gmail.com
@@ -47,7 +52,8 @@ Step 4: Configure Email Connection
     MAIL_FROM_NAME=yourFromName
 
 Step 5: Create Mail Access
-    In the terminal, create a mail access file using the following command:
+
+In the terminal, create a mail access file using the following command:
 
     php artisan make:mail YourMailName
     
@@ -89,7 +95,8 @@ for example:
         }
 
 Step 6: Create Controllers
-    Create a controller using the following command:
+
+Create a controller using the following command:
 
     php artisan make:controller YourControllerName
 
