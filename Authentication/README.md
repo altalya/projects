@@ -1,4 +1,4 @@
-                                    Laravel Authentication and Authorization Guide
+**Laravel Authentication and Authorization Guide**
 
 Introduction:
 
