@@ -8,10 +8,10 @@ In this comprehensive guide, we will walk you through the process of setting up 
 
 Before you embark on this guide, ensure that you have the following prerequisites in place:
 
-    - Composer installed on your system.
-    - A web server such as Apache or Nginx.
-    - PHP installed, preferably version 7.4 or later.
-    - A functional database server (e.g., MySQL).
+- Composer installed on your system.
+- A web server such as Apache or Nginx.
+- PHP installed, preferably version 7.4 or later.
+- A functional database server (e.g., MySQL).
 
 **step 1 : Create a New Laravel Project**
     
@@ -79,9 +79,7 @@ Firstly you need to implement the PHPOpenSourceSaver\JWTAuth\Contracts\JWTSubjec
 The example below should give you an idea of how this could look. Obviously you should make any changes, as necessary, to suit your own needs.
 
         <?php
-
         namespace App;
-
         use PHPOpenSourceSaver\JWTAuth\Contracts\JWTSubject;
         use Illuminate\Notifications\Notifiable;
         use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -150,9 +148,7 @@ you can find the file in the directory [App -> Http -> Requests]
 The example below should give you an idea of how this could look. Obviously you should make any changes, as necessary, to suit your own needs.
 
         <?php
-
         namespace App\Http\Requests;
-
         use Illuminate\Foundation\Http\FormRequest;
 
         class RegistrationRequest extends FormRequest
@@ -191,9 +187,7 @@ you can find the file in the directory [App -> Http -> Requests]
 The example below should give you an idea of how this could look. Obviously you should make any changes, as necessary, to suit your own needs.
 
         <?php
-
         namespace App\Http\Requests;
-
         use Illuminate\Foundation\Http\FormRequest;
 
         class LoginRequest extends FormRequest
@@ -284,7 +278,6 @@ In the created controller, implement methods to handle different actions based o
 Define routes in the routes/api.php file:
 
         <?php
-
         use Illuminate\Http\Request;
         use Illuminate\Support\Facades\Route;
         use App\Http\Controllers\Api\Auth\AuthController;
