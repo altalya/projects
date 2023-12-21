@@ -342,18 +342,18 @@ If the code execute success, it show "200 code" in green color and return the js
 
 for example:
 
-`{
-  "status": "success",
-  "user": {
-    "name": "abc",
-    "email": "abc@gmail.com",
-    "updated_at": "2023-12-21T06:58:47.000000Z",
-    "created_at": "2023-12-21T06:58:47.000000Z",
-    "id": 1
-  },
-  "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvcmVnaXN0ZXIiLCJpYXQiOjE3MDMxNDE5MjcsImV4cCI6MTcwMzE0NTUyNywibmJmIjoxNzAzMTQxOTI3LCJqdGkiOiJXOG05Y05DNFZGYVNmbFczIiwic3ViIjoiNCIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.lamyGlJqzECTt4OIJs8FXWwW1_VYb_VnWO4Fe-bhBFQ",
-  "type": "bearer"
-}`
+    {
+      "status": "success",
+      "user": {
+        "name": "abc",
+        "email": "abc@gmail.com",
+        "updated_at": "2023-12-21T06:58:47.000000Z",
+        "created_at": "2023-12-21T06:58:47.000000Z",
+        "id": 1
+      },
+      "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvcmVnaXN0ZXIiLCJpYXQiOjE3MDMxNDE5MjcsImV4cCI6MTcwMzE0NTUyNywibmJmIjoxNzAzMTQxOTI3LCJqdGkiOiJXOG05Y05DNFZGYVNmbFczIiwic3ViIjoiNCIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.lamyGlJqzECTt4OIJs8FXWwW1_VYb_VnWO4Fe-bhBFQ",
+      "type": "bearer"
+    }
 
 Otherwise it returns an error code in Red color.
 
@@ -369,19 +369,19 @@ If the code execute success, it shows "200 code" in green color and return the j
 
 for example:
 
-`{
-  "status": "success",
-  "user": {
-    "id": 1,
-    "name": "abc",
-    "email": "abc@gmail.com",
-    "email_verified_at": null,
-    "created_at": "2023-12-21T06:58:47.000000Z",
-    "updated_at": "2023-12-21T06:58:47.000000Z"
-  },
-  "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MDMxNDIyNjQsImV4cCI6MTcwMzE0NTg2NCwibmJmIjoxNzAzMTQyMjY0LCJqdGkiOiJCd3k5d1ZtdG93Zk1rdFZ3Iiwic3ViIjoiNCIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.70S9eMJkDnLiTPgfwBHlZS9UwujIkbq11spgGMN1q4A",
-  "type": "bearer"
-}`
+    {
+      "status": "success",
+      "user": {
+        "id": 1,
+        "name": "abc",
+        "email": "abc@gmail.com",
+        "email_verified_at": null,
+        "created_at": "2023-12-21T06:58:47.000000Z",
+        "updated_at": "2023-12-21T06:58:47.000000Z"
+      }
+      "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MDMxNDIyNjQsImV4cCI6MTcwMzE0NTg2NCwibmJmIjoxNzAzMTQyMjY0LCJqdGkiOiJCd3k5d1ZtdG93Zk1rdFZ3Iiwic3ViIjoiNCIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.70S9eMJkDnLiTPgfwBHlZS9UwujIkbq11spgGMN1q4A",
+      "type": "bearer"
+    }
 
 Otherwise it returns an error code in Red color.
 
